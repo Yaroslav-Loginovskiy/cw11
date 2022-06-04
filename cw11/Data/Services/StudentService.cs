@@ -46,7 +46,9 @@ namespace cw11.Data.Services
 
         public void DeleteStudent(int id)
         {
-            Students.Remove(GetStudent(id));
+            var student = GetStudent(id);
+            if(student !=null)
+             Students.Remove(GetStudent(id));
         }
 
         public Student GetStudent(int id)
